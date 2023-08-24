@@ -115,7 +115,7 @@ export default function Page() {
     <div className="layout-container">
       <Header />
       <div className="layout-outlet">
-        <div className="heading w-100 mx-auto px-3 position-absolute">
+        <div className="heading w-100 mx-auto px-4 position-absolute">
           <h1 className="fw-bold">My name is Haris.</h1>
           <h2 className="fw-normal">And this is my portfolio.</h2>
         </div>
