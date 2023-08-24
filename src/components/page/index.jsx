@@ -144,6 +144,7 @@ export default function Page() {
               className="silhouette-animation silhouette-animation__fill"
             />
           </svg>
+          <img src="/images/silhouette.png" alt="" />
         </div>
         <ThreeFiberScene />
         <div className="about"></div>
