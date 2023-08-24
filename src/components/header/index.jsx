@@ -1,11 +1,6 @@
 import React, { useRef, useEffect } from "react";
-
-import styled from "styled-components";
 import { FaEnvelope, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
-const HeaderLogo = styled.img`
-  width: 90px;
-`;
 export default function Header() {
   const svgRef = useRef();
 

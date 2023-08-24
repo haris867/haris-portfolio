@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "../header";
 import Footer from "../footer";
 import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
 import Stars from "../stars";
 
 // function RotatingSphere({ position = [0, 0, 0] }) {
@@ -51,8 +50,6 @@ function AnimatedLight() {
 
 function ThreeFiberScene() {
   const cameraRef = useRef();
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const cameraTarget = useRef(new THREE.Vector3(0, 0, 0));
 
   return (
     <Canvas className="canvas-wrapper">
