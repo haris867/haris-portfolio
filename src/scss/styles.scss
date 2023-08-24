@@ -7,6 +7,12 @@ body {
   padding-top: env(safe-area-inset-top);
 }
 
+@supports (padding: max(0px)) {
+  body {
+    padding-top: max(20px, env(safe-area-inset-top));
+  }
+}
+
 html,
 body,
 #root,
