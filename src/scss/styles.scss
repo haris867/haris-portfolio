@@ -4,6 +4,7 @@ body {
   background-color: #131313 !important;
   color: #fff;
   font-family: "Poppins", sans-serif;
+  padding-top: env(safe-area-inset-top);
 }
 
 html,
