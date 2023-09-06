@@ -1,92 +1,29 @@
 import React, { useRef, useEffect } from "react";
 import Header from "../header";
 import Footer from "../footer";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import Stars from "../stars";
-
-// function RotatingSphere({ position = [0, 0, 0] }) {
-//   const meshRef = useRef(null);
-//   useFrame(() => {
-//     if (meshRef.current) {
-//       meshRef.current.rotation.x += 0.001;
-//       meshRef.current.rotation.y += 0.001;
-//     }
-//   });
-//   return (
-//     <mesh ref={meshRef} position={position}>
-//       <sphereGeometry args={[1, 64, 64]} />
-//       <meshStandardMaterial
-//         color={new THREE.Color("#ffd700")}
-//         metalness={0.7}
-//         roughness={0.1}
-//       />
-//     </mesh>
-//   );
-// }
-
-function AnimatedLight() {
-  const lightRef = useRef();
-
-  useFrame(({ clock }) => {
-    if (lightRef.current) {
-      const time = clock.getElapsedTime();
-      const radius = 15; // The distance from the center
-
-      lightRef.current.position.x = radius * Math.cos(time);
-      lightRef.current.position.y = 15; // Keeping the Y position constant
-      lightRef.current.position.z = radius * Math.sin(time) - 23;
-    }
-  });
-
-  return (
-    <pointLight
-      ref={lightRef}
-      position={[15, 15, -25]}
-      intensity={2000}
-      distance={100}
-    />
-  );
-}
+import Carousel from "react-bootstrap/Carousel";
+import { Col } from "react-bootstrap";
+import { FaGlobe, FaGithub } from "react-icons/fa";
 
 function ThreeFiberScene() {
   const cameraRef = useRef();
 
   return (
-    <Canvas className="canvas-wrapper">
-      <perspectiveCamera
-        ref={cameraRef}
-        aspect={1 / 4}
-        fov={75}
-        position={[0, 0, 25]}
-      />
-      {/* <ambientLight intensity={1} /> */}
-      {/* <directionalLight position={[5, 5, -5]} intensity={1} /> */}
-      <AnimatedLight />
-      <Stars count={300} />
-      {/* <RotatingSphere position={[0, 1.5, 0]} /> */}
-    </Canvas>
+    <div className="canvas-container">
+      <Canvas className="canvas-wrapper">
+        <perspectiveCamera
+          ref={cameraRef}
+          aspect={1 / 4}
+          fov={75}
+          position={[0, 0, 25]}
+        />
+        <Stars count={300} />
+      </Canvas>
+    </div>
   );
 }
-
-// var strokePath = document.querySelector(".silhouette-animation");
-// var strokeLength = strokePath.getTotalLength();
-
-// const svgElement = document.querySelector(".silhouette-animation");
-// console.log(svgElement);
-
-// svgElement.addEventListener("click", function () {
-//   // Remove the class to reset the animation
-
-//   console.log(this);
-
-//   // Force a reflow
-//   void this.offsetWidth;
-
-//   // Restart the animation by setting the animation property to its original value
-//   this.style.animation = "";
-// });
-
-// console.log(strokeLength);
 
 export default function Page() {
   const svgRef = useRef();
@@ -114,12 +51,13 @@ export default function Page() {
   return (
     <div className="layout-container">
       <Header />
+      <ThreeFiberScene />
       <div className="layout-outlet">
-        <div className="heading w-100 mx-auto px-4 position-absolute">
+        <div className="heading w-100 mx-auto px-4">
           <h1 className="fw-bold">My name is Haris.</h1>
           <h2 className="fw-normal">And this is my portfolio.</h2>
         </div>
-        <div className="silhouette position-absolute d-flex justify-content-center">
+        <div className="silhouette d-flex justify-content-center">
           <svg
             ref={svgRef}
             className="w-75"
@@ -145,8 +83,105 @@ export default function Page() {
             />
           </svg>
         </div>
-        <ThreeFiberScene />
-        <div className="about"></div>
+        <div className="about py-5">
+          <Col xs={8} md={6} lg={6} xl={5} className="mx-auto">
+            <div className="heading py-2">
+              <h3 className="fw-bold">My projects</h3>
+            </div>
+          </Col>
+          <Carousel>
+            <Carousel.Item>
+              <div className="d-flex justify-content-center">
+                <Col xs={8} md={6} lg={6} xl={5}>
+                  <img
+                    className="w-100"
+                    src="/images/lc-demo2.png"
+                    alt={`Slide`}
+                  />
+                  <Carousel.Caption className="d-flex justify-content-between align-items-center">
+                    <h3 className="m-0 mx-3">LC Troop</h3>
+                    <div className="icons mx-3">
+                      <a
+                        href="https://lctroop.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGlobe />
+                      </a>
+                      <a
+                        href="https://github.com/haris867/lctroop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub />
+                      </a>
+                    </div>
+                  </Carousel.Caption>
+                </Col>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="d-flex justify-content-center">
+                <Col xs={8} md={6} lg={6} xl={5}>
+                  <img
+                    className="w-100"
+                    src="/images/glimt-demo2.png"
+                    alt={`Slide`}
+                  />
+                  <Carousel.Caption className="d-flex justify-content-between align-items-center">
+                    <h3 className="m-0 mx-3">Glimt</h3>
+                    <div className="icons mx-3">
+                      <a
+                        href="https://glimt.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGlobe />
+                      </a>
+                      <a
+                        href="https://github.com/haris867/glimt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub />
+                      </a>
+                    </div>
+                  </Carousel.Caption>
+                </Col>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="d-flex justify-content-center">
+                <Col xs={8} md={6} lg={6} xl={5}>
+                  <img
+                    className="w-100"
+                    src="/images/bits-demo2.png"
+                    alt={`Slide`}
+                  />
+                  <Carousel.Caption className="d-flex justify-content-between align-items-center">
+                    <h3 className="m-0 mx-3">Bits & Bots</h3>
+                    <div className="icons mx-3">
+                      <a
+                        href="https://bitsandbotsgames.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGlobe />
+                      </a>
+                      <a
+                        href="https://github.com/haris867/bitsandbots"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub />
+                      </a>
+                    </div>
+                  </Carousel.Caption>
+                </Col>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
       </div>
       <Footer />
     </div>
