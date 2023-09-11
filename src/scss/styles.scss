@@ -49,6 +49,8 @@ header {
 .header-content {
   display: flex;
   justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .icons {
@@ -92,17 +94,13 @@ header {
   }
 }
 
-// .logo path:hover {
-//   fill: #fff;
-// }
-
 svg {
   display: flex;
   justify-content: center;
 }
 
 .silhouette-animation {
-  animation: silhouette-dash 4.5s ease-in forwards;
+  animation: silhouette-dash 4s ease-in forwards;
   stroke-dasharray: 1841;
   transition: all ease-in 0.5s;
   fill: transparent;
@@ -119,6 +117,7 @@ svg {
 
 .silhouette svg {
   margin-left: 5vw;
+  margin-top: -50px;
 }
 
 @keyframes dash {
@@ -150,7 +149,7 @@ footer {
 }
 
 .footer-content {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -194,7 +193,7 @@ footer {
 
 .heading h1,
 .heading h2 {
-  animation: fadeInScale 2.5s ease-out;
+  animation: fadeInScale 3s ease-out;
 }
 
 @keyframes fadeInScale {
@@ -226,7 +225,8 @@ footer {
   right: 0;
   left: 0 !important;
   border-radius: 0 0 5px 5px;
-  padding-top: 35px !important;
+  padding-top: 22px !important;
+  padding-bottom: 1rem !important;
   width: 100%;
 }
 
@@ -237,4 +237,37 @@ footer {
 
 .carousel-indicators {
   bottom: -55px !important;
+}
+
+.logo canvas {
+  width: 150px !important;
+  height: 100 !important;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .projects {
+    padding-top: 3rem;
+  }
+  .silhouette svg {
+    margin-top: 0px;
+  }
+}
+
+.w-90 {
+  width: 90%;
 }

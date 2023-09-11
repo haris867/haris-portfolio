@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { FaEnvelope, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import HuLogo from "../logo";
 
 export default function Footer() {
   const svgRef = useRef();
@@ -27,7 +28,7 @@ export default function Footer() {
     <footer className="d-flex align-items-center">
       <div className="footer-content">
         <div className="logo">
-          <svg
+          {/* <svg
             ref={svgRef}
             xmlns="http://www.w3.org/2000/svg"
             width="1106"
@@ -43,7 +44,8 @@ export default function Footer() {
               fill="transparent"
               fillRule="evenodd"
             />
-          </svg>
+          </svg> */}
+          <HuLogo />
         </div>
         <div className="footer-icons d-flex align-items-center">
           <a href="https://github.com/haris867">
