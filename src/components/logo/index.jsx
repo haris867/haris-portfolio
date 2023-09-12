@@ -39,19 +39,14 @@ function Scene({ ...props }) {
             makeDefault={true}
             far={10000}
             near={-50000}
-            zoom={0.6}
+            zoom={0.4}
             position={[1.5, 0.5, 5.96]}
           />
           <directionalLight
             name="Default Light"
             color="#ffffff"
-            intensity={3.4}
-            position={[0, 10, 10]}
-          />
-          <hemisphereLight
-            name="Default Ambient Light"
-            intensity={0.75}
-            color="#fff"
+            intensity={4}
+            position={[0, 10, 140]}
           />
         </scene>
       </group>

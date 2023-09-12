@@ -22,7 +22,7 @@ export default function Header() {
     }
   }, []);
   return (
-    <header className="d-flex justify-content-between align-items-center fade-in">
+    <header className="d-flex justify-content-between align-items-center">
       <div className="header-content">
         <div className="logo">
           <HuLogo />

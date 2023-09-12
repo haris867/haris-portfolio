@@ -255,6 +255,11 @@ footer {
   }
 }
 
+header {
+  opacity: 0;
+  animation: fadeIn 2s forwards 8s;
+}
+
 .main-heading {
   animation: fadeIn 2s forwards;
   opacity: 0;
