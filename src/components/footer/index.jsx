@@ -9,8 +9,6 @@ export default function Footer() {
     if (svgRef.current) {
       const strokePath = svgRef.current.querySelector(".restart-animation");
       if (strokePath) {
-        const strokeLength = strokePath.getTotalLength();
-
         strokePath.addEventListener("click", restartAnimation);
 
         function restartAnimation() {
@@ -20,7 +18,6 @@ export default function Footer() {
             clonedElement.addEventListener("click", restartAnimation);
           }
         }
-        console.log(strokeLength);
       }
     }
   }, []);

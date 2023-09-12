@@ -19,7 +19,6 @@ function Scene({ ...props }) {
 
   const wiggleAmplitude = 0.1; // extent of the wiggle
   const wiggleRotation = Math.sin(angle) * wiggleAmplitude;
-  console.log(wiggleRotation);
 
   return (
     <>

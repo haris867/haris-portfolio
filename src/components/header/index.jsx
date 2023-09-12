@@ -9,8 +9,6 @@ export default function Header() {
     if (svgRef.current) {
       const strokePath = svgRef.current.querySelector(".restart-animation");
       if (strokePath) {
-        const strokeLength = strokePath.getTotalLength();
-
         strokePath.addEventListener("click", restartAnimation);
 
         function restartAnimation() {
@@ -20,14 +18,13 @@ export default function Header() {
             clonedElement.addEventListener("click", restartAnimation);
           }
         }
-        console.log(strokeLength);
       }
     }
   }, []);
   return (
     <header className="d-flex justify-content-between align-items-center fade-in">
       <div className="header-content">
-        <div className="logo ms-3">
+        <div className="logo">
           <HuLogo />
         </div>
         <div className="icons m-3">

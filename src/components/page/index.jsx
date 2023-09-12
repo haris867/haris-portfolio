@@ -32,8 +32,6 @@ export default function Page() {
     if (svgRef.current) {
       const strokePath = svgRef.current.querySelector(".silhouette-animation");
       if (strokePath) {
-        const strokeLength = strokePath.getTotalLength();
-
         strokePath.addEventListener("click", restartAnimation);
 
         function restartAnimation() {
@@ -43,7 +41,6 @@ export default function Page() {
             clonedElement.addEventListener("click", restartAnimation);
           }
         }
-        console.log(strokeLength);
       }
     }
   }, []);
@@ -53,12 +50,39 @@ export default function Page() {
       <Header />
       <ThreeFiberScene />
       <div className="layout-outlet">
-        <div className="heading w-90 mx-auto fade-in">
-          <h1 className="fw-bold">Hi there, web traveler 👋</h1>
-          <h2 className="fw-normal">My name is Haris 🧑‍🚀</h2>
-        </div>
+        <Col xs={10} sm={10} className="heading mx-auto">
+          <h1 className="fw-bold fs-2 main-heading">
+            Hi there, web traveler 👋
+          </h1>
+          <h2 className="fw-normal fs-3 subheading">My name is Haris 🧑‍🚀</h2>
+        </Col>
+        <Col xl={6} className="arrow d-flex justify-content-end my-3 me-4">
+          <div className="text-center">
+            <h3 className="fs-4 white poppins">This is me</h3>
+            <h4 className="fs-5 white poppins">(kind of)</h4>
+          </div>
+          <div className="arrow-fade-in">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+              version="1.1"
+            >
+              <path
+                d="M 183 1.033 C 150.646 4.971, 118.987 16.674, 92.512 34.482 C 59.750 56.520, 36.106 86.192, 24.104 120.330 C 20.543 130.458, 20.303 133.092, 22.750 135.193 C 28.730 140.329, 31.867 138.315, 38.376 125.162 C 57.120 87.285, 87.107 58.053, 127.371 38.409 C 183.833 10.861, 242.952 15.182, 283.683 49.834 C 302.590 65.920, 314.787 88.261, 319.467 115.381 C 321.020 124.377, 321.563 149.616, 320.388 158.188 L 319.775 162.655 308.138 163.861 C 254.373 169.435, 201.582 196.913, 160.901 240.500 C 150.510 251.634, 145.614 258.389, 141.529 267.230 C 127.588 297.404, 136.476 330.116, 162.135 343.068 C 185.375 354.800, 220.732 349.090, 251.500 328.637 C 280.420 309.412, 307.523 275.398, 324.586 236.915 C 329.811 225.130, 336.915 204.747, 339.465 194.226 L 341.227 186.952 344.864 187.575 C 357.865 189.801, 373.935 195.387, 388.050 202.586 C 423.599 220.716, 449.409 252.758, 459.381 291.138 C 463.425 306.705, 464.326 315.659, 463.679 333.883 C 463.042 351.843, 461.820 358.807, 456.535 374.601 C 448.602 398.308, 437.495 415.689, 417.815 435.190 C 405.103 447.787, 404 449.170, 404 452.517 C 404 457.235, 408.451 462, 412.858 462 C 418.133 462, 438.110 444.829, 451.759 428.563 C 470.456 406.281, 482.444 382.709, 488.154 357 C 490.106 348.213, 490.487 343.645, 490.493 329 C 490.500 311.178, 489.617 303.898, 485.821 290.500 C 476.740 258.445, 459.824 230.382, 435.766 207.461 C 419.142 191.623, 402.910 181.083, 382.727 173.020 C 374.497 169.732, 358.870 165.619, 350.451 164.524 L 345.402 163.868 345.822 146.066 C 346.067 135.654, 345.742 123.967, 345.038 117.912 C 341.474 87.252, 329.343 60.497, 310.441 41.607 C 291.591 22.768, 264.144 8.839, 234.299 2.966 C 221.957 0.537, 195.322 -0.466, 183 1.033 M 310.500 186.673 C 270.315 191.668, 218.899 217.522, 184.797 249.881 C 160.970 272.489, 150.238 294.962, 157.279 307.500 C 161.769 315.494, 175.799 322.554, 192.272 325.110 C 209.806 327.831, 226.204 320.490, 248.500 299.939 C 264.709 284.999, 276.132 271.032, 287.924 251.738 C 297.535 236.012, 308.785 210.858, 313.395 194.787 C 314.297 191.645, 315.300 188.382, 315.624 187.537 C 315.986 186.593, 315.691 186.058, 314.857 186.150 C 314.111 186.232, 312.150 186.467, 310.500 186.673 M 381.641 415.268 C 377.236 419.673, 372.632 447.733, 371.026 479.967 C 369.927 502.032, 370.404 505.479, 375.106 509.436 C 377.665 511.589, 379.142 511.997, 384.327 511.979 C 404.980 511.910, 442.574 507.669, 455.017 504.004 C 461.906 501.974, 467.560 497.601, 468.588 493.506 C 471.665 481.245, 460.734 476.943, 440.500 482.451 C 432.678 484.581, 415.441 486.968, 398.344 488.290 C 393.309 488.679, 393.174 488.619, 392.594 485.719 C 391.406 479.782, 392.007 443.320, 393.475 432.187 C 395.075 420.058, 394.658 417.275, 390.841 414.601 C 387.647 412.364, 384.303 412.606, 381.641 415.268"
+                stroke="#fff"
+                strokeWidth={1}
+                fill="#fff"
+                fill-rule="evenodd"
+                className="arrow-path"
+              />
+            </svg>
+          </div>
+        </Col>
+
         <Row className="m-0">
-          <Col xl={6} className="silhouette d-flex justify-content-center">
+          <Col xl={6} className="silhouette d-flex justify-content-center my-3">
             <svg
               ref={svgRef}
               className="w-75"
@@ -84,9 +108,12 @@ export default function Page() {
               />
             </svg>
           </Col>
-          <Col xl={6} className="fade-in align-items-center d-flex">
-            <Col xs={8} md={6} lg={6} xl={7} className="mx-auto">
-              <div className="heading py-2">
+          <Col
+            xl={6}
+            className="about align-items-center d-flex justify-content-center my-3"
+          >
+            <Col xs={10} md={6} xl={7} className="mx-auto">
+              <div className="heading pt-2">
                 <h3 className="fw-bold mb-3">Who am I, then?</h3>
                 <p>Consider me a cosmic architect 🪐</p>
                 <p>
@@ -97,10 +124,10 @@ export default function Page() {
               </div>
             </Col>
           </Col>
-          <Col className="projects fade-in">
-            <Col xs={8} md={6} lg={6} xl={7} className="mx-auto">
-              <div className="heading py-2">
-                <h3 className="fw-bold">My projects</h3>
+          <Col className="projects my-3 mb-5">
+            <Col xs={10} md={8} lg={6} xl={7} className="mx-auto">
+              <div className="heading">
+                <h3 className="fw-bold mb-3">My projects</h3>
               </div>
             </Col>
             <Carousel>

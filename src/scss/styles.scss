@@ -78,29 +78,13 @@ header {
   display: inline-block;
 }
 
-.path {
-  stroke-dasharray: 14727;
-  animation: dash 5s ease-in forwards;
-  margin: 0 auto;
-  transition: fill ease-in 0.5s;
-  fill: transparent;
-}
-
-.logo path {
-  fill: transparent;
-  transition: fill ease-in 0.5s;
-  &:hover {
-    fill: #a540cb;
-  }
-}
-
 svg {
   display: flex;
   justify-content: center;
 }
 
 .silhouette-animation {
-  animation: silhouette-dash 4s ease-in forwards;
+  animation: silhouette-dash 9s ease-in forwards;
   stroke-dasharray: 1841;
   transition: all ease-in 0.5s;
   fill: transparent;
@@ -117,20 +101,17 @@ svg {
 
 .silhouette svg {
   margin-left: 5vw;
-  margin-top: -50px;
+  // margin-top: -70px;
+  max-height: 400px;
+  height: 98%;
 }
 
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 14727;
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes silhouette-dash {
   0% {
+    stroke-dashoffset: 1841;
+    fill: transparent;
+  }
+  60% {
     stroke-dashoffset: 1841;
     fill: transparent;
   }
@@ -191,21 +172,16 @@ footer {
   z-index: 10;
 }
 
-.heading h1,
-.heading h2 {
-  animation: fadeInScale 3s ease-out;
-}
-
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+// @keyframes fadeInScale {
+//   0% {
+//     opacity: 0;
+//     transform: scale(0.8);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }
 
 .canvas-container {
   position: fixed;
@@ -244,12 +220,80 @@ footer {
   height: 100 !important;
 }
 
+.arrow h3 {
+  position: relative;
+  top: 30px;
+  transform: rotate(-10deg);
+  animation: fadeIn 2s forwards 4s;
+  opacity: 0;
+}
+.arrow h4 {
+  position: relative;
+  top: 30px;
+  transform: rotate(-10deg);
+  animation: fadeIn 2s forwards 4s;
+  opacity: 0;
+}
+
+.arrow svg {
+  max-height: 100px;
+  max-width: 100px;
+  position: relative;
+  transform: rotate(10deg);
+  animation: arrow-rotate 2s 2s infinite ease-in-out;
+}
+
+@keyframes arrow-rotate {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.main-heading {
+  animation: fadeIn 2s forwards;
+  opacity: 0;
+}
+
+.subheading {
+  animation: fadeIn 2s forwards 2s;
+  opacity: 0;
+}
+
+.about {
+  animation: fadeIn 2s forwards 8s;
+  opacity: 0;
+}
+
+.projects {
+  animation: fadeIn 2s forwards 8s;
+  opacity: 0;
+}
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 2s forwards 4s;
 }
+.arrow-fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards 5s;
+}
 
 @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ArrowFadeIn {
   0% {
     opacity: 0;
   }
@@ -270,4 +314,16 @@ footer {
 
 .w-90 {
   width: 90%;
+}
+
+.white {
+  color: white;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
 }
