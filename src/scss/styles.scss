@@ -44,6 +44,8 @@ body,
 header {
   height: 110px;
   min-height: 110px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s;
 }
 
 .header-content {
@@ -51,6 +53,7 @@ header {
   justify-content: space-between;
   width: 95%;
   margin: 0 auto;
+  align-items: center;
 }
 
 .icons {
@@ -70,7 +73,7 @@ header {
 }
 
 .logo svg {
-  height: 65px;
+  height: 100px;
   width: auto;
 }
 
@@ -84,7 +87,7 @@ svg {
 }
 
 .silhouette-animation {
-  animation: silhouette-dash 9s ease-in forwards;
+  animation: silhouette-dash 5s ease-in forwards;
   stroke-dasharray: 1841;
   transition: all ease-in 0.5s;
   fill: transparent;
@@ -94,14 +97,12 @@ svg {
   &__fill {
     stroke: white;
     &:hover {
-      stroke: #a540cb;
+      stroke: #000e8e;
     }
   }
 }
 
 .silhouette svg {
-  margin-left: 5vw;
-  // margin-top: -70px;
   max-height: 400px;
   height: 98%;
 }
@@ -133,29 +134,10 @@ footer {
   width: 95%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-}
-
-.footer-content a {
-  color: white;
-  text-decoration: none;
-  font-size: 2em;
+  justify-content: center;
 }
 
 .icons svg {
-  transition: ease-in 0.3s;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.footer-icons {
-  font-size: 1.25em;
-
-  gap: 10px;
-}
-
-.footer-icons svg {
   transition: ease-in 0.3s;
   &:hover {
     transform: scale(1.1);
@@ -172,17 +154,6 @@ footer {
   z-index: 10;
 }
 
-// @keyframes fadeInScale {
-//   0% {
-//     opacity: 0;
-//     transform: scale(0.8);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: scale(1);
-//   }
-// }
-
 .canvas-container {
   position: fixed;
   top: 0;
@@ -193,7 +164,7 @@ footer {
 }
 
 .carousel-caption {
-  background: linear-gradient(transparent, #a540cb 20%);
+  background: linear-gradient(transparent, #000e8e 20%);
   color: #fff !important;
   font-family: "Poppins", sans-serif;
   bottom: 20px !important;
@@ -207,57 +178,12 @@ footer {
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: #a540cb !important;
+  background-color: #ffffff !important;
   margin: 10px 2px 10px 2px;
 }
 
 .carousel-indicators {
   bottom: -55px !important;
-}
-
-.logo canvas {
-  width: 150px !important;
-  height: 100 !important;
-}
-
-.arrow h3 {
-  position: relative;
-  top: 30px;
-  transform: rotate(-10deg);
-  animation: fadeIn 2s forwards 4s;
-  opacity: 0;
-}
-.arrow h4 {
-  position: relative;
-  top: 30px;
-  transform: rotate(-10deg);
-  animation: fadeIn 2s forwards 4s;
-  opacity: 0;
-}
-
-.arrow svg {
-  max-height: 100px;
-  max-width: 100px;
-  position: relative;
-  transform: rotate(10deg);
-  animation: arrow-rotate 2s 2s infinite ease-in-out;
-}
-
-@keyframes arrow-rotate {
-  0% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(10deg);
-  }
-}
-
-header {
-  opacity: 0;
-  animation: fadeIn 2s forwards 8s;
 }
 
 .main-heading {
@@ -331,4 +257,27 @@ img {
 
 .poppins {
   font-family: "Poppins", sans-serif;
+}
+
+.logo-name > div:first-child {
+  height: 90% !important;
+}
+
+.globe-container {
+  min-height: 150px;
+  animation: fadeIn 2s forwards 2s;
+  opacity: 0;
+  margin-top: 20px;
+}
+
+.name-container {
+  animation: fadeIn 2s forwards 5s;
+  opacity: 0;
+  margin-top: 20px;
+}
+
+footer svg {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
 }

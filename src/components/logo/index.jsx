@@ -39,7 +39,7 @@ function Scene({ ...props }) {
             makeDefault={true}
             far={10000}
             near={-50000}
-            zoom={0.4}
+            zoom={0.3}
             position={[1.5, 0.5, 5.96]}
           />
           <directionalLight

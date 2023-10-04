@@ -34,7 +34,7 @@ function Star() {
   return (
     <mesh ref={meshRef} position={[x, y, z]}>
       <sphereGeometry args={[0.01, 64, 64]} />
-      <meshBasicMaterial color={0xa540cb} />
+      <meshBasicMaterial color={0x000e8e} />
     </mesh>
   );
 }

@@ -6,6 +6,8 @@ import Stars from "../stars";
 import Carousel from "react-bootstrap/Carousel";
 import { Col, Row } from "react-bootstrap";
 import { FaGlobe, FaGithub } from "react-icons/fa";
+import HuLogo from "../logo";
+import Globe from "../globe";
 
 function ThreeFiberScene() {
   const cameraRef = useRef();
@@ -51,83 +53,56 @@ export default function Page() {
       <ThreeFiberScene />
       <div className="layout-outlet">
         <Col xs={10} sm={10} className="heading mx-auto">
-          <h1 className="fw-bold fs-2 main-heading">
-            Hi there, web traveler 👋
+          <h1 className="fw-bold fs-2 main-heading text-center">
+            Hello world 👋
           </h1>
-          <h2 className="fw-normal fs-3 subheading">My name is Haris 🧑‍🚀</h2>
-        </Col>
-        <Col xl={6} className="arrow d-flex justify-content-end my-3 me-4">
-          <div className="text-center">
-            <h3 className="fs-4 white poppins">This is me</h3>
-            <h4 className="fs-5 white poppins">(kind of)</h4>
+          <div className="globe-container">
+            <Globe />
           </div>
-          <div className="arrow-fade-in">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="512"
-              height="512"
-              viewBox="0 0 512 512"
-              version="1.1"
-            >
-              <path
-                d="M 183 1.033 C 150.646 4.971, 118.987 16.674, 92.512 34.482 C 59.750 56.520, 36.106 86.192, 24.104 120.330 C 20.543 130.458, 20.303 133.092, 22.750 135.193 C 28.730 140.329, 31.867 138.315, 38.376 125.162 C 57.120 87.285, 87.107 58.053, 127.371 38.409 C 183.833 10.861, 242.952 15.182, 283.683 49.834 C 302.590 65.920, 314.787 88.261, 319.467 115.381 C 321.020 124.377, 321.563 149.616, 320.388 158.188 L 319.775 162.655 308.138 163.861 C 254.373 169.435, 201.582 196.913, 160.901 240.500 C 150.510 251.634, 145.614 258.389, 141.529 267.230 C 127.588 297.404, 136.476 330.116, 162.135 343.068 C 185.375 354.800, 220.732 349.090, 251.500 328.637 C 280.420 309.412, 307.523 275.398, 324.586 236.915 C 329.811 225.130, 336.915 204.747, 339.465 194.226 L 341.227 186.952 344.864 187.575 C 357.865 189.801, 373.935 195.387, 388.050 202.586 C 423.599 220.716, 449.409 252.758, 459.381 291.138 C 463.425 306.705, 464.326 315.659, 463.679 333.883 C 463.042 351.843, 461.820 358.807, 456.535 374.601 C 448.602 398.308, 437.495 415.689, 417.815 435.190 C 405.103 447.787, 404 449.170, 404 452.517 C 404 457.235, 408.451 462, 412.858 462 C 418.133 462, 438.110 444.829, 451.759 428.563 C 470.456 406.281, 482.444 382.709, 488.154 357 C 490.106 348.213, 490.487 343.645, 490.493 329 C 490.500 311.178, 489.617 303.898, 485.821 290.500 C 476.740 258.445, 459.824 230.382, 435.766 207.461 C 419.142 191.623, 402.910 181.083, 382.727 173.020 C 374.497 169.732, 358.870 165.619, 350.451 164.524 L 345.402 163.868 345.822 146.066 C 346.067 135.654, 345.742 123.967, 345.038 117.912 C 341.474 87.252, 329.343 60.497, 310.441 41.607 C 291.591 22.768, 264.144 8.839, 234.299 2.966 C 221.957 0.537, 195.322 -0.466, 183 1.033 M 310.500 186.673 C 270.315 191.668, 218.899 217.522, 184.797 249.881 C 160.970 272.489, 150.238 294.962, 157.279 307.500 C 161.769 315.494, 175.799 322.554, 192.272 325.110 C 209.806 327.831, 226.204 320.490, 248.500 299.939 C 264.709 284.999, 276.132 271.032, 287.924 251.738 C 297.535 236.012, 308.785 210.858, 313.395 194.787 C 314.297 191.645, 315.300 188.382, 315.624 187.537 C 315.986 186.593, 315.691 186.058, 314.857 186.150 C 314.111 186.232, 312.150 186.467, 310.500 186.673 M 381.641 415.268 C 377.236 419.673, 372.632 447.733, 371.026 479.967 C 369.927 502.032, 370.404 505.479, 375.106 509.436 C 377.665 511.589, 379.142 511.997, 384.327 511.979 C 404.980 511.910, 442.574 507.669, 455.017 504.004 C 461.906 501.974, 467.560 497.601, 468.588 493.506 C 471.665 481.245, 460.734 476.943, 440.500 482.451 C 432.678 484.581, 415.441 486.968, 398.344 488.290 C 393.309 488.679, 393.174 488.619, 392.594 485.719 C 391.406 479.782, 392.007 443.320, 393.475 432.187 C 395.075 420.058, 394.658 417.275, 390.841 414.601 C 387.647 412.364, 384.303 412.606, 381.641 415.268"
-                stroke="#fff"
-                strokeWidth={1}
-                fill="#fff"
-                fill-rule="evenodd"
-                className="arrow-path"
-              />
-            </svg>
+        </Col>
+        <Col
+          xs={10}
+          sm={10}
+          className="heading mx-auto d-flex justify-content-center name-container"
+        >
+          <div>
+            <h2 className="fw-normal fs-2 main-heading me-2 my-2">Jeg heter</h2>
+          </div>
+          <div className="logo-name w-25">
+            <HuLogo />
           </div>
         </Col>
 
         <Row className="m-0">
-          <Col xl={6} className="silhouette d-flex justify-content-center my-3">
-            <svg
-              ref={svgRef}
-              className="w-75"
-              xmlns="http://www.w3.org/2000/svg"
-              width="500"
-              height="500"
-              viewBox="0 0 500 500"
-              version="1.1"
-            >
-              <path
-                d="M 108.861 200.967 L 106.500 202.933 109.050 202.967 C 111.530 202.999, 114 201.419, 114 199.800 C 114 198.346, 111.260 198.968, 108.861 200.967 M 138 333.500 C 138 333.775, 138.225 334, 138.500 334 C 138.775 334, 139 333.775, 139 333.500 C 139 333.225, 138.775 333, 138.500 333 C 138.225 333, 138 333.225, 138 333.500 M 144 336.500 C 144 336.775, 144.225 337, 144.500 337 C 144.775 337, 145 336.775, 145 336.500 C 145 336.225, 144.775 336, 144.500 336 C 144.225 336, 144 336.225, 144 336.500"
-                stroke="#A540CB"
-                fill="#A540CB"
-                fillRule="evenodd"
-              />
-              <path
-                d="M 234.500 19.022 C 220.866 20.273, 207.095 23.094, 192.586 27.609 C 187.128 29.307, 184.350 29.750, 183.636 29.036 C 181.793 27.193, 171.963 27.839, 167.268 30.112 C 163.964 31.712, 162.763 32.937, 162.318 35.161 C 161.886 37.322, 160.644 38.648, 157.615 40.185 C 143.714 47.240, 124.184 65.044, 112.819 81.021 C 99.805 99.319, 94.942 114.850, 95.035 137.822 C 95.082 149.460, 97.016 157.785, 101.918 167.453 C 104.163 171.880, 106 176.693, 106 178.146 C 106 179.600, 106.935 183.817, 108.078 187.517 C 109.221 191.217, 109.783 194.557, 109.328 194.939 C 108.873 195.322, 105.125 197.133, 101 198.966 C 89.371 204.131, 89.222 204.392, 94.500 210.369 C 97.331 213.574, 98.359 214.127, 100.492 213.591 C 101.908 213.236, 103.839 212.022, 104.783 210.894 C 105.727 209.766, 107.689 208.217, 109.141 207.452 C 111.653 206.129, 111.842 206.203, 112.983 208.958 C 113.643 210.552, 115.079 212.666, 116.174 213.657 C 117.269 214.648, 118.785 216.942, 119.542 218.754 C 121.229 222.792, 128.220 247.858, 130.403 257.697 C 133.117 269.931, 132.236 304.989, 129 313.501 L 128.139 315.765 118.634 313.725 C 109.675 311.802, 108.982 311.782, 106.565 313.366 C 105.154 314.290, 104 315.762, 104 316.638 C 104 317.514, 101.731 322.934, 98.958 328.684 C 94.716 337.477, 93.397 339.354, 90.649 340.502 C 86.843 342.092, 83.346 345.928, 70.138 363 C 57.531 379.295, 55.687 382.235, 50.015 395.065 C 46.936 402.030, 40.973 412.224, 33.132 423.925 C 20.764 442.384, 13.308 456.011, 8.744 468.500 C 4.051 481.341, 0 494.719, 0 497.374 L 0 500 138.500 500 C 214.675 500, 277 499.832, 277 499.626 C 277 499.420, 276.300 497.282, 275.445 494.876 C 274.590 492.469, 271.622 481.725, 268.849 471 C 258.524 431.056, 256.288 425.298, 247.535 416.122 C 244.173 412.598, 242 409.434, 242 408.064 C 242 405.320, 244.458 401.672, 252.489 392.500 C 255.860 388.650, 259.924 383.700, 261.521 381.500 C 265.242 376.373, 266.211 375.435, 273.766 369.654 C 280.569 364.448, 283.057 360.521, 284.952 352 C 286.782 343.771, 287.003 343.140, 288.637 341.506 C 291.473 338.670, 303.259 339.941, 307.441 343.534 C 308.921 344.806, 311.903 346.146, 314.066 346.511 C 316.230 346.877, 318 347.634, 318 348.195 C 318 348.755, 318.692 348.948, 319.538 348.624 C 320.413 348.288, 321.321 348.673, 321.645 349.517 C 321.958 350.333, 323.080 351, 324.138 351 C 325.197 351, 326.308 351.640, 326.609 352.423 C 326.909 353.205, 327.818 354.100, 328.629 354.411 C 329.440 354.722, 329.885 354.623, 329.618 354.191 C 329.351 353.758, 329.545 352.751, 330.051 351.952 C 330.681 350.956, 330.974 350.892, 330.985 351.750 C 330.993 352.438, 331.421 353, 331.935 353 C 332.449 353, 334.137 353.482, 335.685 354.070 C 337.233 354.659, 338.500 355.033, 338.500 354.901 C 338.500 354.770, 339.625 355.269, 341 356.010 C 342.375 356.752, 344.962 357.264, 346.750 357.148 C 348.538 357.032, 350 357.326, 350 357.802 C 350 358.855, 350.857 359.007, 358.500 359.307 C 361.800 359.437, 365.063 359.897, 365.750 360.330 C 366.438 360.764, 367 360.723, 367 360.241 C 367 359.758, 368.800 359.506, 371 359.680 C 374.006 359.918, 375 359.629, 375 358.517 C 375 357.704, 376.238 356.744, 377.750 356.385 C 381.981 355.379, 383.884 353.237, 383.468 349.948 C 383.267 348.357, 383.472 346.826, 383.925 346.546 C 385.015 345.873, 384.116 335.702, 382.488 330.295 C 381.778 327.935, 381.603 326.254, 382.098 326.561 C 383.242 327.268, 383.246 326.452, 382.109 324.236 C 380.731 321.553, 378 311.571, 378 309.221 C 378 308.064, 377.612 306.878, 377.137 306.585 C 376.663 306.291, 375.701 304.003, 375 301.500 C 374.299 298.997, 373.337 296.709, 372.863 296.415 C 372.388 296.122, 372 295.060, 372 294.055 C 372 293.051, 371.328 290.940, 370.506 289.364 C 368.376 285.280, 368.579 284.082, 372.500 277.570 C 376.540 270.861, 376.795 268.795, 373.938 265.938 C 371.396 263.396, 371.612 262.722, 375.908 259.810 C 380.739 256.535, 382.826 253.192, 383.329 247.924 C 383.850 242.456, 382.041 237.625, 378.831 235.915 C 376.487 234.666, 374.091 232.109, 374.032 230.792 C 374.014 230.403, 376.844 230.178, 380.320 230.292 C 385.874 230.475, 387.087 230.160, 390.320 227.699 C 393.642 225.171, 394 224.441, 393.996 220.199 C 393.994 217.205, 393.238 214.262, 391.912 212.088 C 388.564 206.595, 374.706 191.179, 364.988 182.136 C 356.993 174.696, 356 173.387, 356 170.290 C 356 166.983, 358.651 161, 360.117 161 C 360.494 161, 361.690 159.495, 362.775 157.656 C 364.279 155.108, 366.027 153.896, 370.124 152.562 C 377.160 150.272, 393.152 142.039, 402.804 135.738 C 413.540 128.729, 422.904 119.040, 426.981 110.720 C 433.357 97.711, 431.908 82.589, 423.889 78.443 C 418.557 75.685, 410.664 76.774, 368.670 86.058 C 358.863 88.226, 350.190 90, 349.395 90 C 348.601 90, 347.516 88.856, 346.984 87.458 C 346.453 86.060, 344.279 82.348, 342.153 79.208 C 340.028 76.069, 335.913 69, 333.010 63.500 C 325.406 49.098, 321.633 43.757, 314.349 37.082 C 301.470 25.282, 289.482 21.063, 263 19.013 C 249.207 17.945, 246.219 17.946, 234.500 19.022 M 108.861 200.967 L 106.500 202.933 109.050 202.967 C 111.530 202.999, 114 201.419, 114 199.800 C 114 198.346, 111.260 198.968, 108.861 200.967 M 138 333.500 C 138 333.775, 138.225 334, 138.500 334 C 138.775 334, 139 333.775, 139 333.500 C 139 333.225, 138.775 333, 138.500 333 C 138.225 333, 138 333.225, 138 333.500 M 144 336.500 C 144 336.775, 144.225 337, 144.500 337 C 144.775 337, 145 336.775, 145 336.500 C 145 336.225, 144.775 336, 144.500 336 C 144.225 336, 144 336.225, 144 336.500"
-                stroke="#ffffff"
-                strokeWidth={2}
-                fill="none"
-                fillRule="evenodd"
-                className="silhouette-animation silhouette-animation__fill"
-              />
-            </svg>
-          </Col>
           <Col
             xl={6}
             className="about align-items-center d-flex justify-content-center my-3"
           >
             <Col xs={10} md={6} xl={7} className="mx-auto">
               <div className="heading pt-2">
-                <h3 className="fw-bold mb-3">Who am I, then?</h3>
-                <p>Consider me a cosmic architect 🪐</p>
+                <h3 className="fw-bold mb-3">LITT OM MEG</h3>
                 <p>
-                  In the vast space of the internet, I carve out digital realms
-                  🌌
+                  Jeg er en 25 år gammel nyutdannet(og ambisiøs)
+                  Frontend-utvikler fra Oslo. Med solid kompetanse fra studiet
+                  mitt ved Noroff, brenner jeg for å designe og utvikle
+                  nettsider som ikke bare ser bra ut, men som også gir en flott
+                  brukeropplevelse.
                 </p>
-                <p>Just like the one you've stumbled upon now ✨</p>
+                <p>
+                  Min bakgrunn inkluderer også seks år i kundeservice, noe som
+                  har gitt meg verdifulle ferdigheter i kommunikasjon og
+                  samarbeid. Jeg trives i krysningspunktet mellom design og
+                  teknisk utvikling, og søker nå etter muligheter hvor jeg kan
+                  bidra med min kombinasjon av kreativitet, teknisk ekspertise
+                  og kundefokus.
+                </p>
               </div>
             </Col>
           </Col>
           <Col className="projects my-3 mb-5">
             <Col xs={10} md={8} lg={6} xl={7} className="mx-auto">
               <div className="heading">
-                <h3 className="fw-bold mb-3">My projects</h3>
+                <h3 className="fw-bold mb-3">PROSJEKTER</h3>
               </div>
             </Col>
             <Carousel>
@@ -151,6 +126,37 @@ export default function Page() {
                         </a>
                         <a
                           href="https://github.com/haris867/lctroop"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Col>
+                </div>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <div className="d-flex justify-content-center">
+                  <Col xs={8} md={6} lg={6}>
+                    <img
+                      className="w-100"
+                      src="/images/bits-demo2.png"
+                      alt={`Slide`}
+                    />
+                    <Carousel.Caption className="d-flex justify-content-between align-items-center">
+                      <h3 className="m-0 mx-3">Bits & Bots</h3>
+                      <div className="icons mx-3">
+                        <a
+                          href="https://bitsandbotsgames.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGlobe />
+                        </a>
+                        <a
+                          href="https://github.com/haris867/bitsandbots"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -196,21 +202,51 @@ export default function Page() {
                   <Col xs={8} md={6} lg={6}>
                     <img
                       className="w-100"
-                      src="/images/bits-demo2.png"
+                      src="/images/holidaze-card.png"
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
-                      <h3 className="m-0 mx-3">Bits & Bots</h3>
+                      <h3 className="m-0 mx-3">Holidaze</h3>
                       <div className="icons mx-3">
                         <a
-                          href="https://bitsandbotsgames.netlify.app/"
+                          href="https://holidaze-haris.netlify.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <FaGlobe />
                         </a>
                         <a
-                          href="https://github.com/haris867/bitsandbots"
+                          href="https://github.com/haris867/project-exam-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Col>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="d-flex justify-content-center">
+                  <Col xs={8} md={6} lg={6}>
+                    <img
+                      className="w-100"
+                      src="/images/auction-card.png"
+                      alt={`Slide`}
+                    />
+                    <Carousel.Caption className="d-flex justify-content-between align-items-center">
+                      <h3 className="m-0 mx-3">Auction House</h3>
+                      <div className="icons mx-3">
+                        <a
+                          href="https://auction-house-haris.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGlobe />
+                        </a>
+                        <a
+                          href="https://github.com/haris867/sp-2"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -223,6 +259,20 @@ export default function Page() {
               </Carousel.Item>
             </Carousel>
           </Col>
+          <div>
+            <Col xs={10} md={8} lg={6} xl={7} className="mx-auto">
+              <div className="heading">
+                <h3 className="fw-bold mb-3">FERDIGHETER</h3>
+                <p className="text-center">
+                  HTML - CSS - JavaScript - React - Bootstrap - React Bootstrap
+                  - SASS - Three.js - React-three-fiber - Git - GitHub - npm -
+                  CMS (Sanity & WordPress) - Web design - Figma & Adobe XD
+                  (wireframes & prototyping) - Responsivt design - WCAG (Web
+                  Content Accessibility Guidelines)
+                </p>
+              </div>
+            </Col>
+          </div>
         </Row>
       </div>
       <Footer />
