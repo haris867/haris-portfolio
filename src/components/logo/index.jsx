@@ -8,22 +8,20 @@ import { useFrame } from "@react-three/fiber";
 
 function Scene({ ...props }) {
   const { nodes, materials } = useSpline(
-    "https://prod.spline.design/3iFkr-Dbo4QcgcIb/scene.splinecode"
+    "https://prod.spline.design/2wBxLJEpQ0eJJXw1/scene.splinecode"
   );
-
   const [angle, setAngle] = useState(0);
 
   useFrame(() => {
-    setAngle((prev) => prev + 0.02); // speed of the wiggle
+    setAngle((prev) => prev + 0.02); // Wiggle speed
   });
 
-  const wiggleAmplitude = 0.1; // extent of the wiggle
+  const wiggleAmplitude = 0.1; // Wiggle extent
   const wiggleRotation = Math.sin(angle) * wiggleAmplitude;
-
   return (
     <>
       <group {...props} dispose={null}>
-        <scene name="Scene">
+        <scene name="Scene 1">
           <mesh
             name="Text"
             geometry={nodes.Text.geometry}
@@ -33,7 +31,6 @@ function Scene({ ...props }) {
             position={[0, 0, 0]}
             rotation={[0, wiggleRotation, 0]}
           />
-
           <OrthographicCamera
             name="1"
             makeDefault={true}

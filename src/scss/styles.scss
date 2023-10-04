@@ -243,9 +243,9 @@ footer {
   }
 }
 @media (min-width: 800px) {
-  .name-container h2 {
-    margin-right: -30px !important;
-  }
+  // .name-container h2 {
+  //   margin-right: -30px !important;
+  // }
 }
 @media (min-width: 1200px) {
   .name-container h2 {
@@ -270,7 +270,7 @@ img {
 }
 
 .logo-name > div:first-child {
-  height: 90% !important;
+  height: 50px !important;
 }
 
 .globe-container {

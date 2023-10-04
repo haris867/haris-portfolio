@@ -63,12 +63,14 @@ export default function Page() {
         <Col
           xs={10}
           sm={10}
-          className="heading mx-auto d-flex justify-content-center name-container"
+          className="heading mx-auto justify-content-center name-container"
         >
           <div>
-            <h2 className="fw-normal fs-2 main-heading me-2 my-2">Jeg heter</h2>
+            <h2 className="fw-normal fs-2 main-heading text-center my-2 w-100">
+              Jeg heter
+            </h2>
           </div>
-          <div className="logo-name w-25">
+          <div className="logo-name w-50 mx-auto">
             <HuLogo />
           </div>
         </Col>
@@ -111,7 +113,7 @@ export default function Page() {
                   <Col xs={8} md={6} lg={6}>
                     <img
                       className="w-100"
-                      src="/images/lc-demo2.png"
+                      src="/images/lctroop-slide.png"
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
@@ -142,7 +144,7 @@ export default function Page() {
                   <Col xs={8} md={6} lg={6}>
                     <img
                       className="w-100"
-                      src="/images/bits-demo2.png"
+                      src="/images/bitsandbots-slide.png"
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
@@ -172,7 +174,7 @@ export default function Page() {
                   <Col xs={8} md={6} lg={6}>
                     <img
                       className="w-100"
-                      src="/images/glimt-demo2.png"
+                      src="/images/glimt-slide.png"
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
@@ -202,7 +204,7 @@ export default function Page() {
                   <Col xs={8} md={6} lg={6}>
                     <img
                       className="w-100"
-                      src="/images/holidaze-card.png"
+                      src="/images/holidaze-slide.png"
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
@@ -232,11 +234,11 @@ export default function Page() {
                   <Col xs={8} md={6} lg={6}>
                     <img
                       className="w-100"
-                      src="/images/auction-card.png"
+                      src="/images/auctionhouse-slide.png"
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
-                      <h3 className="m-0 mx-3">Auction House</h3>
+                      <h3 className="m-0 ms-1">Auction House</h3>
                       <div className="icons mx-3">
                         <a
                           href="https://auction-house-haris.netlify.app/"
