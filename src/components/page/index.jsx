@@ -238,8 +238,8 @@ export default function Page() {
                       alt={`Slide`}
                     />
                     <Carousel.Caption className="d-flex justify-content-between align-items-center">
-                      <h3 className="m-0 ms-1">Auction House</h3>
-                      <div className="icons mx-3">
+                      <h3 className="m-0 ms-3">Auction House</h3>
+                      <div className="icons me-3">
                         <a
                           href="https://auction-house-haris.netlify.app/"
                           target="_blank"
