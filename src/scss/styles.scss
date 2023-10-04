@@ -242,6 +242,16 @@ footer {
     margin-top: 0px;
   }
 }
+@media (min-width: 800px) {
+  .name-container h2 {
+    margin-right: -30px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .name-container h2 {
+    margin-right: -60px !important;
+  }
+}
 
 .w-90 {
   width: 90%;

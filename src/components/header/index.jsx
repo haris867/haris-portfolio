@@ -1,5 +1,4 @@
 import { FaEnvelope, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import HuLogo from "../logo";
 
 export default function Header() {
   return (
