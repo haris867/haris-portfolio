@@ -143,37 +143,6 @@ export default function Page() {
                   </Col>
                 </div>
               </Carousel.Item>
-
-              <Carousel.Item>
-                <div className="d-flex justify-content-center">
-                  <Col xs={8} md={6} lg={6}>
-                    <img
-                      className="w-100"
-                      src="/images/bitsandbots-slide.png"
-                      alt={`Slide`}
-                    />
-                    <Carousel.Caption className="d-flex justify-content-between align-items-center">
-                      <h3 className="m-0 mx-3">Bits & Bots</h3>
-                      <div className="icons mx-3">
-                        <a
-                          href="https://bitsandbotsgames.netlify.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FaGlobe />
-                        </a>
-                        <a
-                          href="https://github.com/haris867/bitsandbots"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FaGithub />
-                        </a>
-                      </div>
-                    </Carousel.Caption>
-                  </Col>
-                </div>
-              </Carousel.Item>
               <Carousel.Item>
                 <div className="d-flex justify-content-center">
                   <Col xs={8} md={6} lg={6}>
@@ -194,6 +163,36 @@ export default function Page() {
                         </a>
                         <a
                           href="https://github.com/haris867/glimt"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Col>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="d-flex justify-content-center">
+                  <Col xs={8} md={6} lg={6}>
+                    <img
+                      className="w-100"
+                      src="/images/bitsandbots-slide.png"
+                      alt={`Slide`}
+                    />
+                    <Carousel.Caption className="d-flex justify-content-between align-items-center">
+                      <h3 className="m-0 mx-3">Bits & Bots</h3>
+                      <div className="icons mx-3">
+                        <a
+                          href="https://bitsandbotsgames.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGlobe />
+                        </a>
+                        <a
+                          href="https://github.com/haris867/bitsandbots"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
