@@ -53,8 +53,8 @@ export default function Page() {
       <ThreeFiberScene />
       <div className="layout-outlet">
         <Col xs={10} sm={10} className="heading mx-auto">
-          <h1 className="fw-bold fs-2 main-heading text-center">
-            Hello world 👋
+          <h1 className="fw-bold fs-2 main-heading justify-content-center d-flex mx-auto">
+            Hello world <p className="hand-wave ms-1">👋</p>
           </h1>
           <div className="globe-container">
             <Globe />
@@ -66,7 +66,7 @@ export default function Page() {
           className="heading mx-auto justify-content-center name-container"
         >
           <div>
-            <h2 className="fw-normal fs-2 main-heading text-center my-2 w-100">
+            <h2 className="fw-normal fs-2 main-heading text-center mb-3 w-100">
               Jeg heter
             </h2>
           </div>
@@ -88,15 +88,20 @@ export default function Page() {
                   Frontend-utvikler fra Oslo. Med solid kompetanse fra studiet
                   mitt ved Noroff, brenner jeg for å designe og utvikle
                   nettsider som ikke bare ser bra ut, men som også gir en flott
-                  brukeropplevelse.
+                  brukeropplevelse. I det siste har jeg lært meg mer om 3D
+                  animasjoner i nettleseren med{" "}
+                  <span className="fw-bold">three.js</span> og{" "}
+                  <span className="fw-bold">React-three-fiber</span>
                 </p>
                 <p>
                   Min bakgrunn inkluderer også seks år i kundeservice, noe som
                   har gitt meg verdifulle ferdigheter i kommunikasjon og
-                  samarbeid. Jeg trives i krysningspunktet mellom design og
-                  teknisk utvikling, og søker nå etter muligheter hvor jeg kan
-                  bidra med min kombinasjon av kreativitet, teknisk ekspertise
-                  og kundefokus.
+                  samarbeid. I tillegg har jeg jobbet litt freelance i sommer og
+                  høst, som har gitt meg god innsikt i det å jobbe med kunder
+                  fra start til slutt. Jeg trives i krysningspunktet mellom
+                  design og teknisk utvikling, og søker nå etter muligheter hvor
+                  jeg kan bidra med min kombinasjon av kreativitet, teknisk
+                  ekspertise og kundefokus.
                 </p>
               </div>
             </Col>
@@ -108,7 +113,7 @@ export default function Page() {
               </div>
             </Col>
             <Carousel>
-              <Carousel.Item>
+              <Carousel.Item interval={9000}>
                 <div className="d-flex justify-content-center">
                   <Col xs={8} md={6} lg={6}>
                     <img
@@ -266,11 +271,9 @@ export default function Page() {
               <div className="heading">
                 <h3 className="fw-bold mb-3">FERDIGHETER</h3>
                 <p className="text-center">
-                  HTML - CSS - JavaScript - React - Bootstrap - React Bootstrap
-                  - SASS - Three.js - React-three-fiber - Git - GitHub - npm -
-                  CMS (Sanity & WordPress) - Web design - Figma & Adobe XD
-                  (wireframes & prototyping) - Responsivt design - WCAG (Web
-                  Content Accessibility Guidelines)
+                  HTML | CSS | JavaScript | React | Bootstrap | React Bootstrap
+                  | SASS | Three.js | React-three-fiber | Git | GitHub | npm |
+                  Sanity CMS | Web design | Figma | Adobe XD | WCAG
                 </p>
               </div>
             </Col>

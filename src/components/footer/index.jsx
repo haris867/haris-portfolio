@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-content">
         <h1 className="text-center">
           <a href="#top" className="scroll-arrow">
-            <AiOutlineArrowUp />
+            <AiOutlineArrowUp className="arrow-move" />
           </a>
         </h1>
       </div>

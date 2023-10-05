@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:wght@100;300;400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap");
 
 body {
-  background-color: #131313 !important;
+  background-color: #141414 !important;
   color: #fff;
   font-family: "Poppins", sans-serif;
   padding-top: env(safe-area-inset-top);
@@ -103,8 +103,7 @@ svg {
 }
 
 .silhouette svg {
-  max-height: 400px;
-  height: 98%;
+  max-height: 150px;
 }
 
 @keyframes silhouette-dash {
@@ -148,10 +147,6 @@ footer {
   color: white;
   font-family: "Poppins", sans-serif;
   z-index: 20;
-}
-
-.silhouette {
-  z-index: 10;
 }
 
 .canvas-container {
@@ -210,9 +205,15 @@ footer {
   opacity: 0;
   animation: fadeIn 2s forwards 4s;
 }
-.arrow-fade-in {
-  opacity: 0;
-  animation: fadeIn 2s forwards 5s;
+.arrow-move {
+  animation: bounce 2s infinite;
+}
+
+.hand-wave {
+  animation: wave 1s infinite;
+  transform-origin: right center;
+  transform: rotate(10deg);
+  animation-timing-function: linear;
 }
 
 @keyframes fadeIn {
@@ -224,32 +225,28 @@ footer {
     opacity: 1;
   }
 }
-@keyframes ArrowFadeIn {
+@keyframes bounce {
   0% {
-    opacity: 0;
+    transform: translateY(0);
   }
 
+  50% {
+    transform: translateY(10px);
+  }
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
 
-@media (min-width: 600px) {
-  .projects {
-    padding-top: 3rem;
+  50% {
+    transform: rotate(10deg);
   }
-  .silhouette svg {
-    margin-top: 0px;
-  }
-}
-@media (min-width: 800px) {
-  // .name-container h2 {
-  //   margin-right: -30px !important;
-  // }
-}
-@media (min-width: 1200px) {
-  .name-container h2 {
-    margin-right: -60px !important;
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -290,4 +287,15 @@ footer svg {
   text-decoration: none;
   color: #fff;
   font-size: 2em;
+}
+
+@media (min-width: 600px) {
+  .logo svg {
+    height: 130px;
+    width: auto;
+  }
+}
+@media (min-width: 800px) {
+}
+@media (min-width: 1200px) {
 }
